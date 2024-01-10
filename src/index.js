@@ -1,17 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+// 같은 폴더에있는 App 파일에서 App 컴포넌트 불러오기
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// createRoot() 메서드를 사용하여 렌더링하라 최상위 컨테이너 생성
+// id가 root인 요소를 찾아 이 안에 렌더링함
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+    <React.StrictMode>
     <App />
-  </React.StrictMode>
+    </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
