@@ -1,12 +1,21 @@
 // 리액트 라이브러리 불러오기
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeView from "./views/HomeView";
-import AboutView from "./views/AboutView";
+// import AboutView from "./views/AboutView";
+import smooth from "./utils/smooth";
+import link from "./utils/link";
 
 // App이라는 상수를 선언한 함수형 컴포넌트
 // 화살표 함수 사용
 const App = () => {
+	// useEffect() : 컴포넌트가 렌더링 될때마다 특정 작업을 실행할수있게 하는 hook
+	// 컴포넌트가 렌더링되고 난 이후에 실행되며, 매 렌더링시마다 실행됨
+	useEffect(() => {
+		smooth();
+		link();
+	}, []);
+
 	// 함수형 컴포넌트에서 반환하는 jsx 요소
 	// return 작성 후 컴포넌트를 호출했을때 반환할 내용 작성
 	return (

@@ -1,27 +1,6 @@
 import React, {useState} from "react";
 
-const headerNav = [
-	{
-		title: "intro",
-		url: "#intro"
-	},
-	{
-		title: "skill",
-		url: "#skill"
-	},
-	{
-		title: "site",
-		url: "#site"
-	},
-	{
-		title: "portfolio",
-		url: "#port"
-	},
-	{
-		title: "contact",
-		url: "#contact"
-	}
-];
+import {headerNav} from "../constants";
 
 // 리액트에서는 class 대신 className 사용
 const Header = () => {
